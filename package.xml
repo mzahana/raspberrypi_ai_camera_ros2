@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>raspberrypi_ai_camera_ros2</name>
+  <version>0.0.1</version>
+  <description>Raspberry Pi AI Camera ROS2 Node for IMX500 Object Detection</description>
+  <maintainer email="mohamedashraf123@gmail.com">Mohamed Abdelkader</maintainer>
+  <license>MIT License</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- Dependencies -->
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>vision_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>geometry_msgs</depend>
+  <depend>std_msgs</depend>
+  
+  <!-- Launch dependencies -->
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+
+  <!-- Test dependencies -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <!-- Export dependencies -->
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
