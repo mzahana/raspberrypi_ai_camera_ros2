@@ -41,8 +41,9 @@ The **Raspberry Pi AI Camera ROS2 Package** provides a robust ROS2 node for real
 Before installing this package, ensure you have the following prerequisites:
 
 - **Hardware:**
-  - Raspberry Pi (preferably Pi 4 or later) with sufficient processing power.
+  - Raspberry Pi (preferably Pi 4 or later).
   - Raspberry Pi AI camera.
+  - To Setup the AI camera, check [this](https://www.raspberrypi.com/documentation/accessories/ai-camera.html) tutorial
 
 - **Software:**
   - **Operating System:** Pi OS Bookworm (tested with `Kernel: Linux 6.6.62+rpt-rpi-2712`).
@@ -120,7 +121,7 @@ The node offers various parameters to customize its behavior. These can be set v
 | `inference_rate`        | integer | `30`             | Inference rate (frames per second).                                         |
 | `output_directory`      | string  | `detect`         | Directory to save detection images if `save_images` is enabled.             |
 | `save_images`           | bool    | `false`          | Whether to save images with 
-| `normalized_coordinates`           | bool    | `false`          | Whether the bounding boxes coordinates received from the network are normalized or not .                                     |
+| `normalized_coordinates`| bool    | `false`          | Whether the bounding boxes coordinates received from the network are normalized or not .|
 
 ## Usage
 
@@ -202,6 +203,9 @@ If the `save_images` parameter is enabled (`true`), the node will save images wi
 **Example:**
 
 With `output_directory` set to `/home/pi5/detections`, images will be saved as `detection_1.jpg`, `detection_2.jpg`, etc.
+
+## Deploying Custom Networks
+* To deploy a YOLOv8n model trained on custom dataset, you can follow [this](https://docs.ultralytics.com/integrations/sony-imx500/) tutorial
 
 ## Troubleshooting
 
