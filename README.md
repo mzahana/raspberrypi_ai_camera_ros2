@@ -3,6 +3,8 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![ROS2](https://img.shields.io/badge/ROS2-Humble-blue.svg)
 
+![Alt text](resource/ros2_RPi_AI_cam.png)
+
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
