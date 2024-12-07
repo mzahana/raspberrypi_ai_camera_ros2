@@ -61,7 +61,7 @@ First, clone the repository into your ROS2 workspace's `src` directory:
 
 ```bash
 cd ~/ros2_ws/src
-git clone https://github.com/yourusername/raspberrypi_ai_camera_ros2.git
+git clone https://github.com/mzahana/raspberrypi_ai_camera_ros2.git
 ```
 
 ### 2. Install Dependencies
