@@ -57,6 +57,7 @@ class ObjectDetectionNode(Node):
             parameters=[
                 ('network_package', ''),
                 ('labels_file', ''),
+                ('camera_id', ''),
                 ('frame_id', 'camera_frame'),
                 ('detection_threshold', 0.55),
                 ('iou_threshold', 0.65),
