@@ -86,7 +86,7 @@ class ObjectDetectionNode(Node):
             if not frame_id:
                 self.get_logger().warn("Parameter 'frame_id' is empty. Using default 'camera_frame'.")
                 frame_id = 'camera_frame'
-            camera_id = self.get_parameter('camera_id').get_parameter_value().integer_value
+            camera_id = self.get_parameter('camera_id').get_parameter_value().string_value
             if not camera_id:
                 self.get_logger().warn("Parameter 'camera_id' is empty. Using the first device connected.")
                 camera_id = '' # defaults to fist camera in Picamera2
