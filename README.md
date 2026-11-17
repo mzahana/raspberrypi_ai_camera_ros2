@@ -113,6 +113,7 @@ The node offers various parameters to customize its behavior. These can be set v
 | `network_package`       | string  | _required_       | Path to the object detection network package (`.rpk` file).                 |
 | `labels_file`           | string  | _required_       | Path to the labels file containing class names.                             |
 | `frame_id`              | string  | `camera_frame`   | Frame ID to use in message headers.                                         |
+| `camera_id`             | string  | `''`             | IMX500 camera to use when several are connected. Matched as a substring of the camera's device-tree path, e.g. `i2c@88000` or `i2c@80000` (see `rpicam-hello --list-cameras`). Empty uses the first IMX500 found. |
 | `detection_threshold`   | double  | `0.55`           | Confidence score threshold for detections.                                  |
 | `iou_threshold`         | double  | `0.65`           | Intersection over Union (IOU) threshold for non-maximum suppression.        |
 | `max_detections`        | integer | `10`             | Maximum number of detections per frame.                                     |

@@ -47,6 +47,13 @@ def generate_launch_description():
         description='Frame ID to use in message headers'
     )
 
+    camera_id_arg = DeclareLaunchArgument(
+        'camera_id',
+        default_value='',
+        description='IMX500 camera to use, matched against its device-tree path '
+                    '(e.g. i2c@88000 or i2c@80000). Empty uses the first IMX500 found.'
+    )
+
     detection_threshold_arg = DeclareLaunchArgument(
         'detection_threshold',
         default_value='0.55',
@@ -125,6 +132,7 @@ def generate_launch_description():
                 'network_package': LaunchConfiguration('network_package'),
                 'labels_file': LaunchConfiguration('labels_file'),
                 'frame_id': LaunchConfiguration('frame_id'),
+                'camera_id': LaunchConfiguration('camera_id'),
                 'detection_threshold': LaunchConfiguration('detection_threshold'),
                 'iou_threshold': LaunchConfiguration('iou_threshold'),
                 'max_detections': LaunchConfiguration('max_detections'),
@@ -150,6 +158,7 @@ def generate_launch_description():
         network_package_arg,
         labels_file_arg,
         frame_id_arg,
+        camera_id_arg,
         detection_threshold_arg,
         iou_threshold_arg,
         max_detections_arg,

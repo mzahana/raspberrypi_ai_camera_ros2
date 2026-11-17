@@ -86,10 +86,14 @@ class ObjectDetectionNode(Node):
             if not frame_id:
                 self.get_logger().warn("Parameter 'frame_id' is empty. Using default 'camera_frame'.")
                 frame_id = 'camera_frame'
+
+            # Empty camera_id lets Picamera2 pick the first IMX500 camera found
             camera_id = self.get_parameter('camera_id').get_parameter_value().string_value
-            if not camera_id:
-                self.get_logger().warn("Parameter 'camera_id' is empty. Using the first device connected.")
-                camera_id = '' # defaults to fist camera in Picamera2
+            if camera_id:
+                self.get_logger().info(f"Using IMX500 camera matching camera_id '{camera_id}'.")
+            else:
+                self.get_logger().info("Parameter 'camera_id' is empty. Using the first IMX500 camera found.")
+
             detection_threshold = self.get_parameter('detection_threshold').get_parameter_value().double_value
             iou_threshold = self.get_parameter('iou_threshold').get_parameter_value().double_value
             max_detections = self.get_parameter('max_detections').get_parameter_value().integer_value
